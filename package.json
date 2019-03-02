@@ -1,0 +1,23 @@
+{
+  "name": "kview",
+  "version": "0.0.1",
+  "description": "vue ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinjun1994/kview.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "jinjun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jinjun1994/kview/issues"
+  },
+  "homepage": "https://github.com/jinjun1994/kview#readme"
+}
