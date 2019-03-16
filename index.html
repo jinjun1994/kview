@@ -44,23 +44,34 @@
 
 <body>
     <div id="app">
-        <k-button icon="setting">
-            插啊啊啊啊啊槽
+        <k-button icon="loading" :loading="loading1" @click="loading1 = !loading1">
+            插
+        </k-button>
+        <k-button icon="loading" :loading="loading2" @click="loading2 = !loading2">
+            插
+        </k-button>
+        <k-button icon="loading" :loading="loading3" @click="loading3 = !loading3">
+            插
         </k-button>
         <k-button>
-            插啊啊啊啊啊槽
+            插啊
         </k-button>
         <k-button icon="setting" icon-position="right"> 
-            插啊啊啊啊啊槽
+            插槽
         </k-button>
-        <k-button icon="setting" icon-position="left"> 
-            插啊啊啊啊啊槽
+        <!-- <k-button icon="setting" icon-position="right" loading="true"> 
+            插槽
         </k-button>
 
-        <k-icon name="download"></k-icon>
+        <k-button icon="setting" icon-position="left" loading="true"> 
+            插啊啊
+        </k-button> -->
+
+        
+     
     </div>
     <script src="./src/app.js"></script>
-    <script src="https://at.alicdn.com/t/font_1067954_v3jdjjp9yub.js"></script>
+    <script src="https://at.alicdn.com/t/font_1067954_t9wl79p0f9.js"></script>
 </body>
 
 </html>

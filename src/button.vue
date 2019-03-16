@@ -1,6 +1,10 @@
 <template>
-  <button class="k-button" :class="[`icon-${iconPosition}`]">
-    <k-icon class="icon" v-if="icon" :name="icon"></k-icon>
+  <button class="k-button" :class="[`icon-${iconPosition}`]"
+  @click="$emit('click')">
+  <!--等价于 @click="this.$emit(click)"> -->
+  <!--  当前组件触发点击事件 -->
+    <k-icon class="icon" v-if="icon && !loading" :name="icon"></k-icon>
+    <k-icon class="loading icon" name="loading" v-if="loading"></k-icon>
     <div class="content">
       <slot></slot>   
        <!-- slot can't add class  -->
@@ -17,16 +21,32 @@ export default {
       type: String,
       default: 'left',
       validator (value) {
-        console.log(value);
         return value === 'left' || value === 'right'
-       
       }
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
-  }
+  },
+  methods: {
+    name() {
+      
+    }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+@keyframes spin {
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+
+}
 .k-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -65,6 +85,9 @@ export default {
     .content{
       order: 1;
     }
+  }
+  .loading{
+    animation: spin 1s infinite linear
   }
 }
 </style>
