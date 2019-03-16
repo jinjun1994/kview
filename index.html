@@ -15,7 +15,7 @@
             --border-radius: 4px;
             --color: #333;
             --border-color: #999;
-            --border-color-hover: #666;
+            --border-color-hover: red;
         }
 
         html {
@@ -44,7 +44,7 @@
 
 <body>
     <div id="app">
-        <k-button icon="loading" :loading="loading1" @click="loading1 = !loading1">
+        <!-- <k-button icon="loading" :loading="loading1" @click="loading1 = !loading1">
             插
         </k-button>
         <k-button icon="loading" :loading="loading2" @click="loading2 = !loading2">
@@ -56,9 +56,9 @@
         <k-button>
             插啊
         </k-button>
-        <k-button icon="setting" icon-position="right"> 
+        <k-button icon="setting" icon-position="right">
             插槽
-        </k-button>
+        </k-button> -->
         <!-- <k-button icon="setting" icon-position="right" loading="true"> 
             插槽
         </k-button>
@@ -66,9 +66,19 @@
         <k-button icon="setting" icon-position="left" loading="true"> 
             插啊啊
         </k-button> -->
+        <k-button-group>
+            <k-button icon="left" icon-position="right">
+                插槽
+            </k-button>
+            <k-button icon="setting" icon-position="right">
+                更多
+            </k-button>
+            <k-button icon="right" icon-position="right">
+                下一页
+            </k-button>
+        </k-button-group>
 
-        
-     
+
     </div>
     <script src="./src/app.js"></script>
     <script src="https://at.alicdn.com/t/font_1067954_t9wl79p0f9.js"></script>

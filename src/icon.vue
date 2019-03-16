@@ -1,5 +1,5 @@
 <template>
-    <svg v-if="iconName" class="k-icon" >
+    <svg v-if="iconName" class="k-icon">
       <use :xlink:href="`#i-${iconName}`"></use>
     </svg>
 </template>
