@@ -8,7 +8,14 @@
 
 <script>
     export default {
-        
+        mounted () {
+            console.log(this.$children);       // 只会找vue实例
+            for (let node  of this.$el.children) {
+                if (node.nodeName.toLowerCase() !== 'button' ){
+                    console.warn(`k-button-group 的子元素应该全为 g-button, 但你写的是 ${node.nodeName.toLowerCase()}`)
+                }
+            }
+        }
     }
 </script>
 
