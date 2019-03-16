@@ -1,6 +1,6 @@
 <template>
   <button class="k-button" :class="[`icon-${iconPosition}`]">
-    <k-icon v-if="icon" :name="icon"></k-icon>
+    <k-icon class="icon" v-if="icon" :name="icon"></k-icon>
     <div class="content">
       <slot></slot>   
        <!-- slot can't add class  -->
