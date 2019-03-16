@@ -24,7 +24,8 @@
     display: inline-flex;
     vertical-align: center;
     > .k-button {
-      margin-left: -1px;
+      &:not(:first-child){
+      margin-left: -1px;}
       border-radius: 0;
       &:first-child {
           border-top-left-radius: var(--border-radius);
