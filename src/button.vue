@@ -1,10 +1,9 @@
 <template>
-  <button class="g-button" :class="[`icon-${iconPosition}`]">
-    <svg v-if="icon" class="icon" aria-hidden="true">
-      <use :xlink:href="`#i-${icon}`"></use>
-    </svg>
+  <button class="k-button" :class="[`icon-${iconPosition}`]">
+    <k-icon v-if="icon" :name="icon"></k-icon>
     <div class="content">
-      <slot></slot>
+      <slot></slot>   
+       <!-- slot can't add class  -->
     </div>
   </button>
 </template>
@@ -28,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.g-button {
+.k-button {
   font-size: var(--font-size);
   height: var(--button-height);
   padding: 0 1em;
@@ -39,6 +38,7 @@ export default {
   justify-content: center;
   align-items: center;
   vertical-align: middle;
+  // 上下不对齐 统一加 这句，所有inline都有这个bug
   &:hover {
     border-color: var(--border-color-hover);
   }
