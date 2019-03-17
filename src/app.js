@@ -16,12 +16,15 @@ new Vue({
     },
 })
 
+
 // 单元测试
 import chai from 'chai'
 import  spies  from 'chai-spies';
 chai.use(spies)
 const expect = chai.expect;
+try{
 {
+    // 测试按钮含有icon
     const Constructor = Vue.extend(Button)
     const vm = new Constructor({
         propsData: {
@@ -80,4 +83,9 @@ let button = vm.$el
 button.click()
 expect(spy).to.have.been.called()
 // 期待这个函数被执行
+}}
+catch (error){
+window.errors = [error]
+} finally {
+    console.log(window.errors);
 }
