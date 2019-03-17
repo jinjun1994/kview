@@ -13,7 +13,14 @@
 </template>
 
 <script>
+
+import Icon from './icon'
+
+// Vue.component('k-icon', Icon)
 export default {
+  components: {
+    'k-icon': Icon 
+  },
   // props: ["icon","iconPosition"]
   props: {
     icon: {},
